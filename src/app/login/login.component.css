@@ -1,0 +1,46 @@
+.signin {
+    max-height: 500px;
+    max-width: 450px;
+    width:400px;
+    padding: 30px;
+    text-align: left;
+    border-radius: 5px;
+    position: relative;
+    background-color: cornsilk;
+    margin:120px auto 20px auto
+    }
+    .container{
+        text-align: justify
+    }
+
+    button{
+font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(0, 2, 130);
+  /* width: 60%; */
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align:center;
+  border-radius: 30px
+    }
+
+    .input{
+        margin-top:10px;
+        border-radius: 10px
+    }
+
+    #recaptcha-container{
+        margin-top: 10px
+    }
+
+    h1{
+        text-align: center;
+        margin-bottom: 10px
+    }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { products } from '../products';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,7 +9,7 @@ import { products } from '../products';
 export class DashboardComponent implements OnInit {
   // @Input() product;
   products = products
-  constructor() {
+  constructor(private router: Router) {
     console.log(products)
   }
 
@@ -19,5 +20,11 @@ export class DashboardComponent implements OnInit {
   }
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+  logout() {
+    alert('Are you sure want to logout');
+    localStorage.removeItem('loggedIn')
+    this.router.navigate(["/"]);
+    // window.location.replace('/')
   }
 }

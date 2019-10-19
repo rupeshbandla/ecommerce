@@ -1,0 +1,21 @@
+<mat-card class="signin">
+  <div [hidden]="user">
+    <h1>Login</h1>
+
+    <label for="phone">Phone Number</label><br>
+    <input type="text" [(ngModel)]="phoneNumber.country" class="input" maxlength="2" style="width:40px">
+    <input type="text" [(ngModel)]="phoneNumber.area" class="input" placeholder="10 digit mobile number" maxlength="10" required>
+
+    <div id="recaptcha-container"></div>
+
+    <button (click)="sendLoginCode()">Send OTP</button>
+
+    <div *ngIf="windowRef.confirmationResult">
+      <hr>
+      <label for="code">Enter your Verification Code Here</label><br>
+      <input type="text" name="code" [(ngModel)]="verificationCode">
+      <button (click)="verifyLoginCode()" style="background: rgb(0, 81, 255)">Verify</button>
+    </div>
+  </div>
+
+</mat-card>
