@@ -25,7 +25,6 @@ export class DashboardComponent implements OnInit {
     alert('Are you sure want to logout');
     localStorage.removeItem('loggedIn')
     this.router.navigate(["/"]);
-    // window.location.replace('/')
   }
 }
  
